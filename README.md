@@ -7,9 +7,9 @@ Key findings show that:
 
 * The business has a highly global customer base (91 countries).
 * A small group of repeat customers drives significant activity.
-Revenue exceeds $1.26M, indicating strong commercial performance.
-There are data quality gaps (missing regions) and operational inefficiencies (pending shipments) that require attention.
-Core markets are concentrated in a few countries (USA, Germany, and France).
+* Revenue exceeds $1.26M, indicating strong commercial performance.
+* There are data quality gaps (missing regions) and operational inefficiencies (pending shipments) that require attention.
+* Core markets are concentrated in a few countries (USA, Germany, and France).
 
 The analysis demonstrates how SQL can be used to translate raw data into business decisions.
 
@@ -45,6 +45,7 @@ The analysis demonstrates how SQL can be used to translate raw data into busines
 6. Interpreted insights for business stakeholders
 
 ## Business Questions & Analysis
+
 ### 1. Customer Diversity Analysis
 
 Objective: Understand global customer distribution
@@ -54,12 +55,13 @@ SELECT DISTINCT country AS customer_country
 FROM Customers;
 ```
 
+Visualisation:
+
 Insight:
 
-Customers span 91 countries, indicating a highly globalised customer base.
-This supports international marketing and expansion strategies.
+* Customers span 91 countries, indicating a highly globalised customer base.
+* This supports international marketing and expansion strategies.
 
-Visualisation:
 
 ### 2. Missing Data Audit
 
@@ -71,14 +73,13 @@ FROM Customers
 WHERE Region IS NULL;
 ```
 
+Visualisation:
+
 Insight:
 
-60 customers (7.23%) have missing region data
-This may impact:
-Logistics planning
-Regional marketing campaigns
+* 60 customers (7.23%) have missing region data
+* This may impact logistics planning and regional marketing campaigns
 
-Visualisation:
 
 ### 3. Order Volume Overview
 
@@ -90,12 +91,13 @@ COUNT(OrderID) AS total_orders
 FROM Orders;
 ```
 
+Visualisation:
+
 Insight:
 
 830 total orders placed
 Active customer base contributing to consistent transaction volume
 
-Visualisation:
 
 ### 4. Revenue Calculation
 
@@ -107,12 +109,13 @@ AS total_revenue
 FROM "Order Details";
 ```
 
+Visualisation:
+
 Insight:
 
 Total revenue = $1,265,793.04
 Indicates a strong overall sales performance
 
-Visualisation:
 
 ### 5. Product Performance by Category
 
@@ -125,13 +128,14 @@ GROUP BY CategoryID
 ORDER BY CategoryID ASC;
 ```
 
+Visualisation:
+
 Insight:
 
 Category 3 (Confections) has the highest variety (13 products)
 Category 7 (Produce) has the lowest (5 products)
 Suggests uneven product distribution across categories
 
-Visualisation:
 
 ### 6. High-Value Customers
 
@@ -155,17 +159,17 @@ FROM (
 ) AS eligible_customers;
 ```
 
+Visualisation:
+
 Insight:
 
-28 high-value customers identified
-Top contributors:
-1. SAVEA (31 orders)
-2. ERNSH (30 orders)
-3. QUICK (28 orders)
+* 28 high-value customers identified
+* Top contributors:
+    1. SAVEA (31 orders)
+    2. ERNSH (30 orders)
+    3. QUICK (28 orders)
+* Revenue is concentrated among repeat customers
 
-Revenue is concentrated among repeat customers
-
-Visualisation:
 
 ### 7. Average Order Value (Freight)
 
@@ -178,12 +182,13 @@ GROUP BY CustomerID
 ORDER BY avg_freight_cost ASC;
 ```
 
+Visualisation:
+
 Insight:
 
-Freight costs range from 3.25 to 215.60
-This indicates significant variation in shipping behavior and possible differences in order size, distance, or priority shipping
+* Freight costs range from 3.25 to 215.60
+* This indicates significant variation in shipping behaviour and possible differences in order size, distance, or priority shipping
 
-Visualisation:
 
 ### 8. Supplier Analysis
 
@@ -198,12 +203,13 @@ GROUP BY S.SupplierID
 HAVING supply_count > 5;
 ```
 
+Visualisation:
+
 Insight:
 
-1. No supplier provides more than 1 product.
-2. Indicates a supplier diversification strategy in play.
+* No supplier provides more than 1 product.
+* Indicates a supplier diversification strategy in play.
 
-Visualisation:
 
 ### 9. Strong Market Identification
 
@@ -217,18 +223,12 @@ HAVING customer_count > 5
 ORDER BY customer_count DESC;
 ```
 
-Insight:
-Top markets:
-
-USA (13)
-Germany (11)
-France (11)
-Brazil (9)
-UK (7)
-
-These are priority regions for expansion and retention strategies.
-
 Visualisation:
+
+Insight:
+* Top markets: USA (13), Germany (11), France (11), Brazil (9), and UK (7).
+* These are priority regions for expansion and retention strategies.
+
 
 ### 10. Orders Without Shipment
 
@@ -240,12 +240,13 @@ FROM Orders
 WHERE ShippedDate IS NULL;
 ```
 
+Visualisation:
+
 Insight:
 
-21 orders are pending shipment
-This indicates potential fulfilment delays and operational inefficiencies.
+* 21 orders are pending shipment.
+* This indicates potential fulfilment delays and operational inefficiencies.
 
-Visualisation:
 
 ## Key Insights
 1. Business operates globally across 91 countries.

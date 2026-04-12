@@ -6,8 +6,6 @@ This project analyses the Northwind dataset using SQL to answer real-world busin
 
 It focuses on turning raw data into actionable insights by applying core SQL techniques like aggregation, grouping, and filtering. The analysis highlights key areas such as global customer distribution, high-value customers, business performance, and operational gaps.
 
-Overall, the project demonstrates how data can support decision-making, identify growth opportunities, and improve business efficiency.
-
 ## Project Objectives
 1. Analyse customer distribution and diversity.
 2. Evaluate business activity and revenue performance.
@@ -67,6 +65,7 @@ FROM Customers;
 ```
 
 Visualisation: 
+
 ![Q1](Visualisations/Q1.png)
 
 Insight:
@@ -87,10 +86,14 @@ WHERE Region IS NULL;
 
 Visualisation:
 
+![Q2.1](Visualisations/Q2.1.png)
+
+![Q2.2](Visualisations/Q2.2.png)
+
 Insight:
 
-* 60 customers (7.23%) have missing region data
-* This may impact logistics planning and regional marketing campaigns
+* 60 customers (7.23%) have missing region data.
+* This may impact logistics planning and regional marketing campaigns.
 
 
 ### 3. Order Volume Overview
@@ -105,10 +108,12 @@ FROM Orders;
 
 Visualisation:
 
+![Q3](Visualisations/Q3.png)
+
 Insight:
 
-830 total orders placed
-Active customer base contributing to consistent transaction volume
+* 830 total orders placed.
+* Active customer base contributing to consistent transaction volume.
 
 
 ### 4. Revenue Calculation
@@ -123,10 +128,12 @@ FROM "Order Details";
 
 Visualisation:
 
+![Q4](Visualisations/Q4.png)
+
 Insight:
 
-Total revenue = $1,265,793.04
-Indicates a strong overall sales performance
+* Total revenue = $1,265,793.04.
+* Indicates a strong overall sales performance.
 
 
 ### 5. Product Performance by Category
@@ -142,11 +149,13 @@ ORDER BY CategoryID ASC;
 
 Visualisation:
 
+![Q5](Visualisations/Q5.png)
+
 Insight:
 
-Category 3 (Confections) has the highest variety (13 products)
-Category 7 (Produce) has the lowest (5 products)
-Suggests uneven product distribution across categories
+* Category 3 (Confections) has the highest variety (13 products).
+* Category 7 (Produce) has the lowest (5 products).
+* This suggests uneven product distribution across categories.
 
 
 ### 6. High-Value Customers
@@ -173,14 +182,18 @@ FROM (
 
 Visualisation:
 
+![Q6.1](Visualisations/Q2.1.png)
+
+![Q6.1](Visualisations/Q2.1.png)
+
 Insight:
 
-* 28 high-value customers identified
-* Top contributors:
+* 28 high-value customers identified.
+* Top contributors include:
     1. SAVEA (31 orders)
     2. ERNSH (30 orders)
     3. QUICK (28 orders)
-* Revenue is concentrated among repeat customers
+* Revenue is concentrated among repeat customers.
 
 
 ### 7. Average Order Value (Freight)
@@ -196,10 +209,16 @@ ORDER BY avg_freight_cost ASC;
 
 Visualisation:
 
+![Q7.1](Visualisations/Q7.1.png)
+
+![Q7.2](Visualisations/Q7.2.png)
+
+![Q7.3](Visualisations/Q7.3.png)
+
 Insight:
 
-* Freight costs range from 3.25 to 215.60
-* This indicates significant variation in shipping behaviour and possible differences in order size, distance, or priority shipping
+* Freight costs range from 3.25 to 215.60.
+* This indicates significant variation in shipping behaviour and possible differences in order size, distance, or priority shipping.
 
 
 ### 8. Supplier Analysis
@@ -216,6 +235,10 @@ HAVING supply_count > 5;
 ```
 
 Visualisation:
+
+![Q8.1](Visualisations/Q8.1.png)
+
+![Q8.2](Visualisations/Q8.2.png)
 
 Insight:
 
@@ -237,6 +260,12 @@ ORDER BY customer_count DESC;
 
 Visualisation:
 
+![Q9.1](Visualisations/Q9.1.png)
+
+![Q9.2](Visualisations/Q9.2.png)
+
+![Q9.3](Visualisations/Q9.3.png)
+
 Insight:
 * Top markets: USA (13), Germany (11), France (11), Brazil (9), and UK (7).
 * These are priority regions for expansion and retention strategies.
@@ -253,6 +282,8 @@ WHERE ShippedDate IS NULL;
 ```
 
 Visualisation:
+
+![Q10](Visualisations/Q10.png)
 
 Insight:
 
@@ -276,3 +307,8 @@ Insight:
 3. Expand aggressively in top-performing countries.
 4. Optimise logistics to reduce unshipped orders.
 5. Evaluate supplier strategy for efficiency and scalability.
+
+## Conclusion
+
+Overall, the project demonstrates how data can support decision-making, identify growth opportunities, and improve business efficiency.
+

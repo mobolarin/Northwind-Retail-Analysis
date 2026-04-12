@@ -45,7 +45,7 @@ The analysis demonstrates how SQL can be used to translate raw data into busines
 6. Interpreted insights for business stakeholders
 
 ## Business Questions & Analysis
-#### 1. Customer Diversity Analysis
+### 1. Customer Diversity Analysis
 
 Objective: Understand global customer distribution
 
@@ -80,7 +80,7 @@ Regional marketing campaigns
 
 Visualisation:
 
-3. Order Volume Overview
+### 3. Order Volume Overview
 
 Objective: Measure overall business activity
 
@@ -97,7 +97,7 @@ Active customer base contributing to consistent transaction volume
 
 Visualisation:
 
-4. Revenue Calculation
+### 4. Revenue Calculation
 
 Objective: Estimate total revenue
 
@@ -114,7 +114,7 @@ Indicates a strong overall sales performance
 
 Visualisation:
 
-5. Product Performance by Category
+### 5. Product Performance by Category
 
 Objective: Evaluate product distribution
 
@@ -133,7 +133,7 @@ Suggests uneven product distribution across categories
 
 Visualisation:
 
-6. High-Value Customers
+### 6. High-Value Customers
 
 Objective: Identify top-performing customers
 
@@ -159,14 +159,15 @@ Insight:
 
 28 high-value customers identified
 Top contributors:
-SAVEA (31 orders)
-ERNSH (30 orders)
-QUICK (28 orders)
+1. SAVEA (31 orders)
+2. ERNSH (30 orders)
+3. QUICK (28 orders)
+
 Revenue is concentrated among repeat customers
 
 Visualisation:
 
-7. Average Order Value (Freight)
+### 7. Average Order Value (Freight)
 
 Objective: Understand customer cost behaviour
 
@@ -177,16 +178,14 @@ GROUP BY CustomerID
 ORDER BY avg_freight_cost ASC;
 ```
 
-Insight (refined):
+Insight:
 
 Freight costs range from 3.25 to 215.60
-Indicates:
-Significant variation in shipping behavior
-Possible differences in order size, distance, or priority shipping
+This indicates significant variation in shipping behavior and possible differences in order size, distance, or priority shipping
 
 Visualisation:
 
-8. Supplier Analysis
+### 8. Supplier Analysis
 
 Objective: Identify key suppliers
 
@@ -206,7 +205,7 @@ Insight:
 
 Visualisation:
 
-9. Strong Market Identification
+### 9. Strong Market Identification
 
 Objective: Identify high-customer regions
 
@@ -231,7 +230,7 @@ These are priority regions for expansion and retention strategies.
 
 Visualisation:
 
-10. Orders Without Shipment
+### 10. Orders Without Shipment
 
 Objective: Track operational delays
 
@@ -244,9 +243,7 @@ WHERE ShippedDate IS NULL;
 Insight:
 
 21 orders are pending shipment
-Indicates potential:
-Fulfillment delays
-Operational inefficiencies
+This indicates potential fulfilment delays and operational inefficiencies.
 
 Visualisation:
 

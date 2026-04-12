@@ -1,0 +1,114 @@
+North Wind SQL Analysis
+Business Questions
+1.  Customer Diversity Analysis: What is the customer diversity? How globally distributed is the customer base?
+What: List of unique countries where customers are located.
+Why: The marketing team wants to understand how globally distributed the customer base is.
+Skill: DISTINCT
+Query: 
+SELECT DISTINCT country AS customer_country 
+FROM Customers;
+Result: The customer base is distributed across 91 different countries.
+
+2. Missing Data Audit
+What: All customers who do not have a region assigned.  
+Why: Incomplete customer data can affect communication and logistics.
+Skill: NULL Handling
+Query: 
+SELECT CustomerID, CompanyName, Country 
+FROM Customers 
+WHERE Region IS NULL;
+Result: There are 60 customers who have not been an assigned a region. This is 7.23% of the customer pool.
+
+3. Order Volume Overview: What is the total business activity? 
+What: Total number of orders placed.
+Why: Management wants a quick snapshot of total business activity. 
+Skill: Aggregate + Alias
+Query: 
+SELECT DISTINCT COUNT(CustomerID) AS total_customers,
+COUNT(OrderID) AS total_orders
+FROM Orders;
+Result: There are 830 customers and orders in total each.
+
+4. Revenue Calculation: What is the total revenue?
+What: Total revenue using the 'Order Details' table.
+Why: Finance wants to estimate the total revenue generated. 
+Skill: Aggregate + Business Logic
+Query: 
+SELECT SUM(UnitPrice * Quantity * (1-discount)) 
+AS total_revenue 
+FROM 'Order Details';
+Result: The total revenue for the organisation  is 1, 265, 793.04.
+
+5. Product Performance by Category: How does each category perform?
+What: Total number of products in each category. 
+Why: The product team wants to understand how each category performs.
+Skill: GROUP BY
+Query: 
+SELECT CategoryID, COUNT(ProductID) AS product_count 
+FROM Products GROUP BY CategoryID ORDER BY CategoryID ASC;
+Result: The category with the highest variety is category 3 (Confections), with 13 products, while category 7 (Produce) has the lowest, with just 5 products.
+
+6. High-Value Customers: Which customers bring in significant revenue?
+What: Customers who have placed more than 10 orders. 
+Why: The sales team wants to identify customers who bring significant revenue. 
+Skill: GROUP BY + HAVING
+Query: 
+i. SELECT CustomerID, COUNT(*) AS total_orders
+FROM Orders  
+GROUP BY CustomerID
+HAVING total_orders > 10
+ORDER BY total_orders DESC;
+
+ii. SELECT COUNT(*) AS high_order_customer_count
+FROM (SELECT CustomerID
+      FROM Orders
+      GROUP BY CustomerID
+      HAVING COUNT(OrderID) > 10) AS eligible_customers;
+Result: The top 5 customers include SAVEA at 31 orders, ERNSH at 30 orders, QUICK at 28 orders, HUNGO at 19 orders, and FOLKO at 19 orders.
+In total, 28 customers placed more than 10 orders.
+
+7. Average Order Value by Customer: What is the (average) cost per customer?
+What: Average freight cost per customer.
+Why: To understand customer spending behaviour. 
+Skill: Aggregate + GROUP BY
+Query: 
+SELECT CustomerID, AVG(Freight) AS avg_freight_cost
+FROM Orders
+GROUP BY CustomerID
+ORDER BY avg_freight_cost ASC;
+Result: not sure how to interpret the result other than the range of average freight cost: Min-3.25, Max-215.60
+
+8. Multiple-Product Suppliers: Who are the key suppliers?
+What: Suppliers who supply more than 5 products. 
+Why: Procurement wants to identify key suppliers. 
+Skill: GROUP BY + HAVING
+Query: 
+SELECT S.SupplierID, Count(P.ProductID) AS supply_count
+FROM Suppliers S
+LEFT join Products P
+ON S.SupplierID = P.ProductID                         
+GROUP BY S.SupplierID
+HAVING supply_count > 5;
+Result: None of the suppliers provide more than 1 product.
+
+9.  Countries with High Customer Base: What are the strong markets?
+What: Countries that have more than 5 customers. 
+Why: The expansion team wants to focus on strong markets. 
+Skill: DISTINCT + GROUP BY + HAVING
+Query: 
+SELECT DISTINCT Country AS Customer_country, COUNT(CustomerID) AS Customer_count
+FROM Customers
+GROUP BY Customer_country
+HAVING customer_count > 5
+ORDER BY Customer_count DESC;
+Result: USA - 13, Germany - 11, France - 11, Brazil - 9, UK - 7
+
+10. Orders Without Shipment 
+What: Total number of orders that have not been shipped yet. 
+Why: Operations team needs to track delayed or unshipped orders. 
+Skill: NULL + Business Insight
+Query: 
+SELECT COUNT(OrderID) AS pending_shipments
+FROM Orders
+WHERE ShippedDate IS NULL;
+Result: There are 21 pending shipments

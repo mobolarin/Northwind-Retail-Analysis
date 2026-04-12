@@ -1,6 +1,22 @@
 # Northwind SQL Business Analysis
-### Customer, Revenue & Operational Insights
+* Customer, Revenue & Operational Insights
 
+## Overview
+This project analyses the Northwind dataset using SQL to answer real-world business questions across customer behaviour, revenue, and operations.
+
+It focuses on turning raw data into actionable insights by applying core SQL techniques like aggregation, grouping, and filtering. The analysis highlights key areas such as global customer distribution, high-value customers, business performance, and operational gaps.
+
+Overall, the project demonstrates how data can support decision-making, identify growth opportunities, and improve business efficiency.
+
+## Project Objectives
+1. Analyse customer distribution and diversity.
+2. Evaluate business activity and revenue performance.
+3. Identify high-value customers and strong markets.
+4. Assess data quality issues.
+5. Highlight operational gaps (e.g., unshipped orders).
+6. Support decision-making for marketing, sales, and operations teams.
+
+   
 ## Executive Summary
 
 This project analyses the Northwind retail database to extract actionable business insights across customers, revenue, products, and operations using SQL.
@@ -15,13 +31,6 @@ Key findings show that:
 
 The analysis demonstrates how SQL can be used to translate raw data into business decisions.
 
-## Project Objectives
-1. Analyse customer distribution and diversity.
-2. Evaluate business activity and revenue performance.
-3. Identify high-value customers and strong markets.
-4. Assess data quality issues.
-5. Highlight operational gaps (e.g., unshipped orders).
-6. Support decision-making for marketing, sales, and operations teams.
 
 ## Dataset
 #### Source: Northwind Database (SQLite)
@@ -57,7 +66,8 @@ SELECT DISTINCT country AS customer_country
 FROM Customers;
 ```
 
-Visualisation:
+Visualisation: 
+![Q1](Visualisations/Q1.png)
 
 Insight:
 

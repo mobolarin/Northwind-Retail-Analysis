@@ -1,4 +1,6 @@
-# Northwind Analysis
+# Northwind SQL Business Analysis
+### Customer, Revenue & Operational Insights
+
 ## Executive Summary
 
 This project analyses the Northwind retail database to extract actionable business insights across customers, revenue, products, and operations using SQL.

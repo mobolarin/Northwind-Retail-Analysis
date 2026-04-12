@@ -5,8 +5,8 @@ This project analyses the Northwind retail database to extract actionable busine
 
 Key findings show that:
 
-The business has a highly global customer base (91 countries).
-A small group of repeat customers drives significant activity.
+* The business has a highly global customer base (91 countries).
+* A small group of repeat customers drives significant activity.
 Revenue exceeds $1.26M, indicating strong commercial performance.
 There are data quality gaps (missing regions) and operational inefficiencies (pending shipments) that require attention.
 Core markets are concentrated in a few countries (USA, Germany, and France).

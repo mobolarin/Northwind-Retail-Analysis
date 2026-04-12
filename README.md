@@ -14,27 +14,27 @@ Core markets are concentrated in a few countries (USA, Germany, and France).
 The analysis demonstrates how SQL can be used to translate raw data into business decisions.
 
 ## Project Objectives
-Analyse customer distribution and diversity
-Evaluate business activity and revenue performance
-Identify high-value customers and strong markets
-Assess data quality issues
-Highlight operational gaps (e.g., unshipped orders)
-Support decision-making for marketing, sales, and operations teams
+1. Analyse customer distribution and diversity.
+2. Evaluate business activity and revenue performance.
+3. Identify high-value customers and strong markets.
+4. Assess data quality issues.
+5. Highlight operational gaps (e.g., unshipped orders).
+6. Support decision-making for marketing, sales, and operations teams.
 
 ## Dataset
-Source: Northwind Database (SQLite)
-Tables Used:
-Customers
-Orders
-Order Details
-Products
-Suppliers
-Categories
+#### Source: Northwind Database (SQLite)
+#### Tables Used:
+1. Customers
+2. Orders
+3. Order Details
+4. Products
+5. Suppliers
+6. Categories
 
 ## Tools & Technologies
-SQL (SQLite) – Data extraction & transformation
-SQLite Online – Query execution
-Excel – Data visualisation & reporting
+1. SQL (SQLite) – Data extraction & transformation
+2. SQLite Online – Query execution
+3. Excel – Data visualisation & reporting
 
 ## Project Workflow
 1. Loaded dataset into SQLite

@@ -1,4 +1,4 @@
-# Gift-2-Northwind-Analysis
+# Northwind Analysis
 ## Executive Summary
 
 This project analyses the Northwind retail database to extract actionable business insights across customers, revenue, products, and operations using SQL.
@@ -45,7 +45,7 @@ The analysis demonstrates how SQL can be used to translate raw data into busines
 6. Interpreted insights for business stakeholders
 
 ## Business Questions & Analysis
-1. Customer Diversity Analysis
+#### 1. Customer Diversity Analysis
 
 Objective: Understand global customer distribution
 
@@ -61,7 +61,7 @@ This supports international marketing and expansion strategies.
 
 Visualisation:
 
-2. Missing Data Audit
+### 2. Missing Data Audit
 
 Objective: Identify incomplete customer records
 

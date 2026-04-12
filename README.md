@@ -1,5 +1,5 @@
 # Northwind SQL Business Analysis
-* Customer, Revenue & Operational Insights
+Customer, Revenue & Operational Insights
 
 ## Overview
 This project analyses the Northwind dataset using SQL to answer real-world business questions across customer behaviour, revenue, and operations.
@@ -16,7 +16,6 @@ It focuses on turning raw data into actionable insights by applying core SQL tec
 
    
 ## Executive Summary
-
 This project analyses the Northwind retail database to extract actionable business insights across customers, revenue, products, and operations using SQL.
 
 Key findings show that:
@@ -298,10 +297,9 @@ Insight:
 4. 7.23% data incompleteness (regions missing).
 5. Core markets are concentrated in 5 countries.
 6. Operational gaps exist with pending shipments.
-7. Supplier base is fragmented, not centralised
+7. Supplier base is fragmented, not centralised.
 
 ## Recommendations
-
 1. Improve data quality processes (mandatory region field).
 2. Focus retention strategies on high-value customers.
 3. Expand aggressively in top-performing countries.
@@ -309,6 +307,5 @@ Insight:
 5. Evaluate supplier strategy for efficiency and scalability.
 
 ## Conclusion
-
 Overall, the project demonstrates how data can support decision-making, identify growth opportunities, and improve business efficiency.
 
